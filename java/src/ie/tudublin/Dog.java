@@ -21,4 +21,8 @@ public class Dog
 	{
 		System.out.println("Woof");
 	}
+
+	public static void main(String[] args){
+		
+	}
 }
