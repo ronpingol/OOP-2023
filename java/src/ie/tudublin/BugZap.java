@@ -98,6 +98,7 @@ public class BugZap extends PApplet {
 		if ((frameCount % 60) == 0) {
 			// Do something
 			drawPlayer(50, 100);
+			
 		}
 
 	}
