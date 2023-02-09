@@ -42,13 +42,20 @@ public class LoopsIf extends PApplet {
                 break;
             case 1:
                 fill(255, 200, 200);
-                if (mouseX < cx && mouseY < cy) {
+                if (mouseX < cx && mouseY < cy) 
+                {
                     rect(0, 0, cx, height);
-                } else if (mouseX > cx && mouseY < cy) {
+                } 
+                else if (mouseX > cx && mouseY < cy) 
+                {
                     rect(cx, 0, cx, height);
-                } else if (mouseX < cx && mouseY > cy) {
+                } 
+                else if (mouseX < cx && mouseY > cy) 
+                {
                     rect(0, cy, cx, cy);
-                } else {
+                } 
+                else 
+                {
                     rect(cx, cy, cx, cy);
                 }
                 break;
