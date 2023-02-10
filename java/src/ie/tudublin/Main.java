@@ -21,6 +21,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new LoopsIf());
     }
 
+	public static void LoopsFor()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new LoopsFor());
+    }
+
 	public static void bugZap()
 	{
 		String[] a = {"MAIN"};
@@ -36,7 +42,8 @@ public class Main
 		penny.speak();
 
 		//loops();
-		LoopsIf();
+		//LoopsIf();
+		LoopsFor();
 	}
 	
 }
