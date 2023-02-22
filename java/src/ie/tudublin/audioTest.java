@@ -46,7 +46,7 @@ public class audioTest extends PApplet
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix; 
-        ap = minim.loadFile("", 1024);
+        ap = minim.loadFile("watchThis.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
