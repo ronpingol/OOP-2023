@@ -26,16 +26,24 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new StarMap());
     }
+
+	public static void testing()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new testing());
+    }
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
+		/*System.out.println("Hello world");
 		
 		Dog penny = new Dog();
 		penny.setName("Penny");
 		penny.speak();
 
-		starMap();
+		starMap();*/
+
+		testing();
 	}
 	
 }
