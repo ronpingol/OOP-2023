@@ -22,6 +22,7 @@ public class testing extends PApplet
         stroke(0);
 
         line(100,50,600,250);
+        rect(100, 50, 20, 200);
     }
 
 }
