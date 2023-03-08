@@ -21,7 +21,7 @@ public class testing extends PApplet
         strokeWeight(2);
         stroke(0);
 
-        line(10,0,10,360);
+        line(100,50,600,250);
     }
 
 }
