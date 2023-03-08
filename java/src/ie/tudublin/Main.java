@@ -39,16 +39,24 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new audioTest());
     }
+
+	public static void audioTest2()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new audioTest2());
+    }
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
+		/*System.out.println("Hello world");
 		
 		Dog penny = new Dog();
 		penny.setName("Penny");
 		penny.speak();
 
-		audioTest();
+		audioTest();*/
+		audioTest2();
+
 	}
 	
 }
