@@ -1,5 +1,8 @@
 package ie.tudublin;
 
+import ie.tudublin.*;
+import processing.core.PApplet;
+
 public class Main
 {
 
@@ -45,21 +48,21 @@ public class Main
         processing.core.PApplet.runSketch( a, new Audio3());
     }
 
-	public static void life()
+	public static void Life()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Life());
+        processing.core.PApplet.runSketch(  a, new Life());
     }
 	
 	public static void main(String[] args)
 	{
 		System.out.println("Hello world");
 		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
+		//Dog penny = new Dog();
+		//penny.setName("Penny");
+		//penny.speak();
 
-		life();
+		Life();
 	}
 	
 }
