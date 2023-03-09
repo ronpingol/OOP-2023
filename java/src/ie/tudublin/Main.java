@@ -45,7 +45,43 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new audioTest2());
     }
+
+	public static void audioTest3()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new audioTest3());
+    }
 	
+	public static void newAudio()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new newAudio());
+    }
+
+	public static void newAudio2()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new newAudio2());
+    }
+
+	public static void newAudio3()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new newAudio3());
+    }
+
+	public static void MusicPiano()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new MusicPiano());
+    }
+
+	public static void Clouds()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Clouds());
+    }
+
 	public static void main(String[] args)
 	{
 		/*System.out.println("Hello world");
@@ -55,8 +91,10 @@ public class Main
 		penny.speak();
 
 		audioTest();*/
-		audioTest2();
-
+		//newAudio3();
+		//MusicPiano();
+		//RunningPerson();
+		Clouds();
 	}
 	
 }

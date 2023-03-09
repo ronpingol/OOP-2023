@@ -23,7 +23,7 @@ public void settings() {
 
 public void setup() {
   minim = new Minim(this);
-  song = minim.loadFile("somethingComfoting.mp3", 1024);
+  song = minim.loadFile("shelter.mp3");
   song.play();
   stroke(255);
   strokeWeight(2);
