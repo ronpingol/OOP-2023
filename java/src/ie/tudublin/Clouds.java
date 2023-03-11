@@ -12,8 +12,6 @@ public class Clouds extends PApplet {
     int numStars = 1000;
     int numClouds = 20;
     Cloud[] clouds = new Cloud[numClouds];
-    ShootingStar shootingStar;
-    boolean shootingStarActive = false;
 
     public void settings() {
         size(800, 600, P3D);
@@ -30,8 +28,6 @@ public class Clouds extends PApplet {
 
         numStars = 1000; // Define the number of stars in the starfield
         fft.forward(song.mix); // Perform the FFT on the first frame
-
-        shootingStar = new ShootingStar();
     }
 
     public void draw() {
@@ -59,45 +55,7 @@ public class Clouds extends PApplet {
             clouds[i].update(fft);
             clouds[i].display();
         }
-
-        if (!shootingStarActive) {
-            if (random(1) < 0.001f) {
-                shootingStar = new ShootingStar();
-                shootingStarActive = true;
-            }
-        } else {
-            shootingStar.update();
-            shootingStar.display();
-            if (shootingStar.isOffScreen()) {
-                shootingStarActive = false;
-            }
-        }
     }
-
-    class ShootingStar {
-        PVector position;
-        PVector velocity;
-        float size;
-        int color;
-      
-        ShootingStar() {
-          position = new PVector(random(-width/2, width/2), random(-height/2, height/2), random(-1000, -200));
-          velocity = new PVector(random(-3, -1), random(-3, -1), random(1, 3));
-          size = random(2, 5);
-          color = color(255, 255, 255);
-        }
-      
-        void update() {
-          position.add(velocity);
-        }
-      
-        void display() {
-          stroke(color);
-          strokeWeight(size);
-          point(position.x, position.y, position.z);
-        }
-      }
-      
 
     class Cloud {
         PVector position;
@@ -118,14 +76,15 @@ public class Clouds extends PApplet {
             if (position.z > 200) {
                 position.z = random(-1000, -200);
             }
+        }
 
-            // Shooting star
-            if (random(1) < 0.005) { // 0.5% chance of shooting star
-                position.x = random(-width / 2, width / 2);
-                position.y = random(-height / 2, height / 2);
-                position.z = random(-800, -200);
-                velocity.z = random(5, 20);
-            }
+        void display() {
+            pushMatrix();
+            translate(position.x, position.y, position.z);
+            noStroke();
+            fill(color);
+            ellipse(0, 0, size, size / 2);
+            popMatrix();
         }
     }
 }

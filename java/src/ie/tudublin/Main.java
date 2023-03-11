@@ -70,10 +70,28 @@ public class Main
         processing.core.PApplet.runSketch( a, new newAudio3());
     }
 
-	public static void MusicPiano()
+	public static void Audio4()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new MusicPiano());
+        processing.core.PApplet.runSketch( a, new Audio4());
+    }
+
+	public static void Audio5()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio5());
+    }
+
+	public static void RunningPerson()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new RunningPerson());
+    }
+
+	public static void Fireworks()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Fireworks());
     }
 
 	public static void Clouds()
@@ -82,19 +100,42 @@ public class Main
         processing.core.PApplet.runSketch( a, new Clouds());
     }
 
+	public static void Lorenz()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Lorenz());
+    }
+
+	public static void LorenzVisual()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new LorenzVisual());
+    }
+
+	public static void flowers()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new flowers());
+    }
+
 	public static void main(String[] args)
 	{
 		/*System.out.println("Hello world");
 		
 		Dog penny = new Dog();
 		penny.setName("Penny");
-		penny.speak();
+		penny.speak();*/
 
-		audioTest();*/
-		//newAudio3();
+		//audioTest3();
+		//newAudio3(); 
 		//MusicPiano();
 		//RunningPerson();
-		Clouds();
+		//Clouds();
+		//Fireworks();
+		//Audio5();
+		//LorenzVisual();
+		//line();
+		flowers();
 	}
 	
 }
