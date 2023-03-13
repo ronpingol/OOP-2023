@@ -133,9 +133,9 @@ public class Main
 		//Clouds();
 		//Fireworks();
 		//Audio5();
-		//LorenzVisual();
+		LorenzVisual();
 		//line();
-		flowers();
+		//flowers();
 	}
 	
 }
