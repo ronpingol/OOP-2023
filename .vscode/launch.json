@@ -5,7 +5,7 @@
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
-            "projectName": ""
+            "projectName": "java"
         },
         {
             "type": "java",

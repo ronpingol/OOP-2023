@@ -112,10 +112,10 @@ public class Main
         processing.core.PApplet.runSketch( a, new LorenzVisual());
     }
 
-	public static void flowers()
+	public static void randomLines()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new flowers());
+        processing.core.PApplet.runSketch( a, new randomLines());
     }
 
 	public static void main(String[] args)
@@ -133,9 +133,10 @@ public class Main
 		//Clouds();
 		//Fireworks();
 		//Audio5();
-		LorenzVisual();
+		//Lorenz();
 		//line();
 		//flowers();
+		randomLines();
 	}
 	
 }
