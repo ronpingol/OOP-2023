@@ -127,16 +127,16 @@ public class Main
 		penny.speak();*/
 
 		//audioTest3();
-		//newAudio3(); 
+		//newAudio2(); 
 		//MusicPiano();
 		//RunningPerson();
 		//Clouds();
 		//Fireworks();
 		//Audio5();
-		//Lorenz();
+		Lorenz();
 		//line();
 		//flowers();
-		randomLines();
+		//randomLines();
 	}
 	
 }
