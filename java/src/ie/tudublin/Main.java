@@ -118,6 +118,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new randomLines());
     }
 
+	public static void audioHm()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new audioHm());
+    }
+
 
 	public static void main(String[] args)
 	{
@@ -138,7 +144,7 @@ public class Main
 		//line();
 		//flowers();
 		//randomLines();
-		
+		audioHm();
 	}
 	
 }
