@@ -118,6 +118,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new randomLines());
     }
 
+	public static void Aizawa()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Aizawa());
+    }
+
 	public static void main(String[] args)
 	{
 		/*System.out.println("Hello world");
