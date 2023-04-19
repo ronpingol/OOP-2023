@@ -124,6 +124,18 @@ public class Main
         processing.core.PApplet.runSketch( a, new audioHm());
     }
 
+	public static void blabla()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new blabla());
+    }
+
+	public static void testTest()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new testTest());
+    }
+
 
 	public static void main(String[] args)
 	{
@@ -134,7 +146,7 @@ public class Main
 		penny.speak();*/
 
 		//audioTest3();
-		//newAudio2(); 
+		//newAudio(); 
 		//MusicPiano();
 		//RunningPerson();
 		//Clouds();
@@ -144,6 +156,9 @@ public class Main
 		//line();
 		//flowers();
 		//randomLines();
+		//audioHm();
+		//blabla();
+		//testTest();
 		audioHm();
 	}
 	

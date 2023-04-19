@@ -22,7 +22,7 @@ public class audioHm extends PApplet {
   
   public void setup() {
     minim = new Minim(this);
-    song = minim.loadFile("inferno.mp3");
+    song = minim.loadFile("bloodybass.mp3");
     fft = new FFT(song.bufferSize(), song.sampleRate());
     song.play();
     frameRate(60);
