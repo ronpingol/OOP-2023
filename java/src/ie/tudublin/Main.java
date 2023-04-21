@@ -50,6 +50,7 @@ public class Main
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new audioTest3());
+	}
 	public static void audio2()
 	{
 		String[] a = {"MAIN"};
@@ -146,6 +147,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new audioHm());
     }
 
+	public static void audioHmTest()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new audioHmTest());
+    }
+
 	public static void blabla()
 	{
 		String[] a = {"MAIN"};
@@ -181,8 +188,9 @@ public class Main
 		//audioHm();
 		//blabla();
 		//testTest();
-		audioHm();
+		//audioHm();
 		//yasc();
+		audioHm();
 	}
 	
 }
