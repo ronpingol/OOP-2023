@@ -165,6 +165,42 @@ public class Main
         processing.core.PApplet.runSketch( a, new testTest());
     }
 
+	public static void StarsMaps()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new StarsMaps());
+    }
+
+	public static void StarMap()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new StarMap());
+    }
+
+	public static void NematodeVisualizer()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new NematodeVisualizer());
+    }
+
+	public static void Gnatt()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Gnatt());
+    }
+
+	public static void UI()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new UI());
+    }
+
+	public static void cafe()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new cafe());
+    }
+
 
 	public static void main(String[] args)
 	{
@@ -190,7 +226,14 @@ public class Main
 		//testTest();
 		//audioHm();
 		//yasc();
-		audioHm();
+		//audioHm();
+		//StarsMaps();
+		//StarMap();
+		//NematodeVisualizer();
+		//Gnatt();
+		//UI();
+		//cafe();
+
 	}
 	
 }

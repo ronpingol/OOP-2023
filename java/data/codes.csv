@@ -1,0 +1,11 @@
+colour,r,g,b,value
+black,0,0,0,0
+brown,165,42,42,1
+red,255,0,0,2
+orange,255,165,0,3
+yellow,255,255,0,4
+green,0,255,0,5
+blue,0,0,255,6
+violet,128,0,128,7
+grey,100,100,100,8
+white,255,255,255,9

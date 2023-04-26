@@ -14,19 +14,11 @@ public class audioHm extends PApplet {
 
   float angle = 0;
   float colorAngle = 0;
-
-  int[] sphereColors = {
-      color(255, 0, 0),
-      color(0, 255, 0),
-      color(0, 0, 255),
-      color(255, 255, 0),
-      color(0, 255, 255),
-      color(255, 0, 255),
-      color(255, 255, 255)
-  };
+  float noiseScale = 0.05f;
+  float noiseStrength = 100;
 
   public void settings() {
-    size(640, 640, P3D);
+    size(1280, 720, P3D);
     smooth(8);
   }
 
@@ -42,67 +34,67 @@ public class audioHm extends PApplet {
     background(0);
     lights();
 
-    // Sphere field in top-left corner
+    // Cube field in top-left corner
     pushMatrix();
     translate(width / 4, height / 4, -100);
-    drawShapeField();
+    drawCubeField();
     popMatrix();
 
-    // Sphere field in top-right corner
+    // Cube field in top-right corner
     pushMatrix();
     translate(width / 4 * 3, height / 4, -100);
-    drawShapeField();
+    drawCubeField();
     popMatrix();
 
-    // Sphere field in bottom-right corner
+    // Cube field in bottom-right corner
     pushMatrix();
     translate(width / 4 * 3, height / 4 * 3, -100);
-    drawShapeField();
+    drawCubeField();
     popMatrix();
 
-    // Sphere field in bottom-left corner
+    // Cube field in bottom-left corner
     pushMatrix();
     translate(width / 4, height / 4 * 3, -100);
-    drawShapeField();
+    drawCubeField();
     popMatrix();
 
-    // Sphere field in center of screen
+    // Cube field in center of screen
     pushMatrix();
     translate(width / 2, height / 2, -100);
-    drawShapeField();
+    drawCubeField();
     popMatrix();
   }
 
-  private void drawShapeField() {
+  private void drawCubeField() {
     rotateX(angle / 30.0f);
     rotateY(angle * 1.3f / 30.0f);
     rotateZ(angle * 0.7f / 30.0f);
     noStroke();
-    float r = 200;
     fft.forward(song.mix);
     for (int i = 0; i < numBands; i++) {
       bandSize[i] = fft.getBand(i) * 5;
     }
     angle += map(bandSize[0], 0, 100, 0.01f, 0.1f);
     colorAngle += map(bandSize[1], 0, 100, 0.001f, 0.01f);
-    for (int i = 0; i < 360; i += 5) {
-      float x = r * cos(radians(i));
-      float y = r * sin(radians(i));
-      float z = 0;
-      float size = map(bandSize[i / 5], 0, 255, 0, 50);
-      float yOffset = map(sin(angle + i), -1, 1, -50, 50);
-      int colorIndex = (i / 5) % sphereColors.length;
-      int c = sphereColors[colorIndex];
-      fill(c);
-      pushMatrix();
-      translate(x, y + yOffset, z);
-      if (i % 2 == 0) {
-        box(size);
-      } else {
-        sphere(size);
+    for (int i = -200; i < 200; i += 20) {
+      for (int j = -200; j < 200; j += 20) {
+        for (int k = -200; k < 200; k += 20) {
+          float x = i;
+          float y = j;
+          float z = k;
+          float size = map(bandSize[(i + 200) / 20], 0, 255, 0, 50);
+          float yOffset = noise(i * noiseScale, j * noiseScale, k * noiseScale) * noiseStrength;
+          // Assign a different color for each cube based on its position
+          int cubeColor = color(map(i + colorAngle, 0, 512, 0, 255),
+              map(j + colorAngle, 0, 512, 0, 255),
+              map(k + colorAngle, 0, 512, 0, 255));
+          fill(cubeColor);
+          pushMatrix();
+          translate(x, y + yOffset, z);
+          box(size);
+          popMatrix();
+        }
       }
-      popMatrix();
     }
   }
-
 }
