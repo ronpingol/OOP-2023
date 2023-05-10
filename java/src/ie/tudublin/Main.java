@@ -165,6 +165,11 @@ public class Main
         processing.core.PApplet.runSketch( a, new testTest());
     }
 
+	public static void dam()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new dam());
+    }
 
 	public static void main(String[] args)
 	{
@@ -190,7 +195,8 @@ public class Main
 		//testTest();
 		//audioHm();
 		//yasc();
-		audioHm();
+		//audioHmTest();
+		dam();
 	}
 	
 }
